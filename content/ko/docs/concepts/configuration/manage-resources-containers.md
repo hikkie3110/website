@@ -47,6 +47,13 @@ feature:
 또는 강제적(시스템이 컨테이너가 제한을 초과하지 않도록 방지)으로 구현할 수 있다. 런타임마다
 다른 방식으로 동일한 제약을 구현할 수 있다.
 
+{{< note >}}
+컨테이너가 자체 메모리 제한을 지정하지만, 메모리 요청을 지정하지 않는 경우, 쿠버네티스는
+제한과 일치하는 메모리 요청을 자동으로 할당한다. 마찬가지로, 컨테이너가 자체 CPU 제한을
+지정하지만, CPU 요청을 지정하지 않는 경우, 쿠버네티스는 제한과 일치하는 CPU 요청을 자동으로
+할당한다.
+{{< /note >}}
+
 ## 리소스 타입
 
 *CPU* 와 *메모리* 는 각각 *리소스 타입* 이다. 리소스 타입에는 기본 단위가 있다.
@@ -112,7 +119,7 @@ CPU는 항상 절대 수량으로 요청되며, 상대적 수량은 아니다.
 
 `memory` 에 대한 제한 및 요청은 바이트 단위로 측정된다.
 E, P, T, G, M, K와 같은 접미사 중 하나를 사용하여 메모리를
-일반 정수 또는 고정 소수점 정수로 표현할 수 있다. Ei, Pi, Ti, Gi, Mi, Ki와
+일반 정수 또는 고정 소수점 숫자로 표현할 수 있다. Ei, Pi, Ti, Gi, Mi, Ki와
 같은 2의 거듭제곱을 사용할 수도 있다. 예를 들어, 다음은 대략 동일한 값을 나타낸다.
 
 ```shell
@@ -132,11 +139,8 @@ metadata:
   name: frontend
 spec:
   containers:
-  - name: db
-    image: mysql
-    env:
-    - name: MYSQL_ROOT_PASSWORD
-      value: "password"
+  - name: app
+    image: images.my-company.example/app:v4
     resources:
       requests:
         memory: "64Mi"
@@ -144,8 +148,8 @@ spec:
       limits:
         memory: "128Mi"
         cpu: "500m"
-  - name: wp
-    image: wordpress
+  - name: log-aggregator
+    image: images.my-company.example/log-aggregator:v6
     resources:
       requests:
         memory: "64Mi"
@@ -313,7 +317,7 @@ _임시-스토리지_ 를 사용하여 로컬 임시 저장소를 관리할 수 
 * `spec.containers[].resources.requests.ephemeral-storage`
 
 `ephemeral-storage` 에 대한 제한 및 요청은 바이트 단위로 측정된다. E, P, T, G, M, K와
-같은 접미사 중 하나를 사용하여 스토리지를 일반 정수 또는 고정 소수점 정수로 표현할 수 있다.
+같은 접미사 중 하나를 사용하여 스토리지를 일반 정수 또는 고정 소수점 숫자로 표현할 수 있다.
 Ei, Pi, Ti, Gi, Mi, Ki와 같은 2의 거듭제곱을 사용할 수도 있다.
 예를 들어, 다음은 대략 동일한 값을 나타낸다.
 
@@ -330,18 +334,15 @@ metadata:
   name: frontend
 spec:
   containers:
-  - name: db
-    image: mysql
-    env:
-    - name: MYSQL_ROOT_PASSWORD
-      value: "password"
+  - name: app
+    image: images.my-company.example/app:v4
     resources:
       requests:
         ephemeral-storage: "2Gi"
       limits:
         ephemeral-storage: "4Gi"
-  - name: wp
-    image: wordpress
+  - name: log-aggregator
+    image: images.my-company.example/log-aggregator:v6
     resources:
       requests:
         ephemeral-storage: "2Gi"
@@ -757,4 +758,4 @@ LastState: map[terminated:map[exitCode:137 reason:OOM Killed startedAt:2015-07-0
 
 * [ResourceRequirements](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#resourcerequirements-v1-core) API 레퍼런스 읽어보기
 
-* XFS의 [프로젝트 쿼터](http://xfs.org/docs/xfsdocs-xml-dev/XFS_User_Guide/tmp/en-US/html/xfs-quotas.html)에 대해 읽어보기
+* XFS의 [프로젝트 쿼터](https://xfs.org/docs/xfsdocs-xml-dev/XFS_User_Guide/tmp/en-US/html/xfs-quotas.html)에 대해 읽어보기

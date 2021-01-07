@@ -31,7 +31,7 @@ when using kubeadm to set up a kubernetes cluster.
 * Each host must [have docker, kubelet, and kubeadm installed](/docs/setup/production-environment/tools/kubeadm/install-kubeadm/).
 * Each host should have access to the Kubernetes container image registry (`k8s.gcr.io`) or list/pull the required etcd image using
 `kubeadm config images list/pull`. This guide will setup etcd instances as
-[static pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/) managed by a kubelet.
+[static pods](/docs/tasks/configure-pod-container/static-pod/) managed by a kubelet.
 * Some infrastructure to copy files between hosts. For example `ssh` and `scp`
   can satisfy this requirement.
 
@@ -50,7 +50,8 @@ this example.
 
 
 1. Configure the kubelet to be a service manager for etcd.
-
+  
+   {{< note >}}You must do this on every host where etcd should be running.{{< /note >}}
     Since etcd was created first, you must override the service priority by creating a new unit file
     that has higher precedence than the kubeadm-provided kubelet unit file.
 
@@ -269,5 +270,4 @@ this example.
 Once you have a working 3 member etcd cluster, you can continue setting up a
 highly available control plane using the [external etcd method with
 kubeadm](/docs/setup/production-environment/tools/kubeadm/high-availability/).
-
 

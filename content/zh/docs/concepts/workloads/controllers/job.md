@@ -497,7 +497,7 @@ cleaned up by CronJobs based on the specified capacity-based cleanup policy.
 
 ### TTL mechanism for finished Jobs
 -->
-## 自动清理完成的 Job
+## 自动清理完成的 Job   {#clean-up-finished-jobs-automatically}
 
 完成的 Job 通常不需要留存在系统中。在系统中一直保留它们会给 API
 服务器带来额外的压力。
@@ -812,7 +812,7 @@ for pods with `RestartPolicy` equal to `OnFailure` or `Never`.
 -->
 ### 副本控制器    {#replication-controller}
 
-Job 与[副本控制器](/docs/user-guide/replication-controller)是彼此互补的。
+Job 与[副本控制器](/zh/docs/concepts/workloads/controllers/replicationcontroller/)是彼此互补的。
 副本控制器管理的是那些不希望被终止的 Pod （例如，Web 服务器），
 Job 管理的是那些希望被终止的 Pod（例如，批处理作业）。
 

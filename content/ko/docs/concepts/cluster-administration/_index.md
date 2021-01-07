@@ -47,22 +47,22 @@ no_list: true
 
 * [쿠버네티스 컨테이너 환경](/ko/docs/concepts/containers/container-environment/)은 쿠버네티스 노드에서 Kubelet으로 관리하는 컨테이너에 대한 환경을 설명한다.
 
-* [쿠버네티스 API에 대한 접근 제어](/docs/reference/access-authn-authz/controlling-access/)는 사용자와 서비스 어카운트에 대한 권한을 설정하는 방법을 설명한다.
+* [쿠버네티스 API에 대한 접근 제어](/ko/docs/reference/access-authn-authz/controlling-access/)는 사용자와 서비스 어카운트에 대한 권한을 설정하는 방법을 설명한다.
 
 * [인증](/docs/reference/access-authn-authz/authentication/)은 다양한 인증 옵션을 포함한 쿠버네티스에서의 인증에 대해 설명한다.
 
-* [인가](/docs/reference/access-authn-authz/authorization/)는 인증과는 별개로, HTTP 호출 처리 방법을 제어한다.
+* [인가](/ko/docs/reference/access-authn-authz/authorization/)는 인증과는 별개로, HTTP 호출 처리 방법을 제어한다.
 
 * [어드미션 컨트롤러 사용하기](/docs/reference/access-authn-authz/admission-controllers/)는 인증과 권한 부여 후 쿠버네티스 API 서버에 대한 요청을 가로채는 플러그인에 대해 설명한다.
 
-* [쿠버네티스 클러스터에서 Sysctls 사용하기](/docs/concepts/cluster-administration/sysctl-cluster/)는 관리자가 `sysctl` 커맨드라인 도구를 사용하여 커널 파라미터를 설정하는 방법에 대해 설명한다.
+* [쿠버네티스 클러스터에서 Sysctls 사용하기](/docs/tasks/administer-cluster/sysctl-cluster/)는 관리자가 `sysctl` 커맨드라인 도구를 사용하여 커널 파라미터를 설정하는 방법에 대해 설명한다.
 
 * [감사(audit)](/docs/tasks/debug-application-cluster/audit/)는 쿠버네티스의 감사 로그를 다루는 방법에 대해 설명한다.
 
 ### kubelet 보안
-  * [마스터-노드 통신](/ko/docs/concepts/architecture/control-plane-node-communication/)
+  * [컨트롤 플레인-노드 통신](/ko/docs/concepts/architecture/control-plane-node-communication/)
   * [TLS 부트스트래핑(bootstrapping)](/docs/reference/command-line-tools-reference/kubelet-tls-bootstrapping/)
-  * [Kubelet 인증/인가](/docs/admin/kubelet-authentication-authorization/)
+  * [Kubelet 인증/인가](/docs/reference/command-line-tools-reference/kubelet-authentication-authorization/)
 
 ## 선택적 클러스터 서비스
 

@@ -19,7 +19,7 @@ Service Catalog itself can work with any kind of managed service, not just Googl
 
 ## {{% heading "prerequisites" %}}
 
-* Understand the key concepts of [Service Catalog](/docs/concepts/service-catalog/).
+* Understand the key concepts of [Service Catalog](/docs/concepts/extend-kubernetes/service-catalog/).
 * Install [Go 1.6+](https://golang.org/dl/) and set the `GOPATH`.
 * Install the [cfssl](https://github.com/cloudflare/cfssl) tool needed for generating SSL artifacts.
 * Service Catalog requires Kubernetes version 1.7+.
@@ -78,6 +78,6 @@ sc uninstall
 ## {{% heading "whatsnext" %}}
 
 * View [sample service brokers](https://github.com/openservicebrokerapi/servicebroker/blob/master/gettingStarted.md#sample-service-brokers).
-* Explore the [kubernetes-incubator/service-catalog](https://github.com/kubernetes-incubator/service-catalog) project.
+* Explore the [kubernetes-sigs/service-catalog](https://github.com/kubernetes-sigs/service-catalog) project.
 
 

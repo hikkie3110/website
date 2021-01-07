@@ -54,7 +54,7 @@ The `kubernetes.io/` and `k8s.io/` prefixes are reserved for Kubernetes core com
 
 Valid label values must be 63 characters or less and must be empty or begin and end with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`), dots (`.`), and alphanumerics between.
 
-For example, here’s the configuration file for a Pod that has two labels `environment: production` and `app: nginx` :
+For example, here's the configuration file for a Pod that has two labels `environment: production` and `app: nginx` :
 
 ```yaml
 
@@ -188,7 +188,7 @@ kubectl get pods -l 'environment,environment notin (frontend)'
 Some Kubernetes objects, such as [`services`](/docs/concepts/services-networking/service/)
 and [`replicationcontrollers`](/docs/concepts/workloads/controllers/replicationcontroller/),
 also use label selectors to specify sets of other resources, such as
-[pods](/docs/concepts/workloads/pods/pod/).
+[pods](/docs/concepts/workloads/pods/).
 
 #### Service and ReplicationController
 

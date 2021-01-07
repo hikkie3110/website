@@ -140,7 +140,7 @@ Route53 hosted zone은 서브도메인도 지원한다. 여러분의 hosted zone
 `example.com`하위에는 그렇지 않을 수 있다).
 
 `dev.example.com`을 hosted zone으로 사용하고 있다고 가정해보자.
-보통 사용자는 [일반적인 방법](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.html) 에 따라 생성하거나
+보통 사용자는 [일반적인 방법](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/CreatingNewSubdomain.html) 에 따라 생성하거나
 `aws route53 create-hosted-zone --name dev.example.com --caller-reference 1` 와 같은 커맨드를 이용한다.
 
 그 후 도메인 내 레코드들을 확인할 수 있도록 상위 도메인내에 NS 레코드를 생성해야 한다. 여기서는,
@@ -198,7 +198,7 @@ kops는 클러스터에 사용될 설정을 생성할것이다. 여기서 주의
 
 만약 kops사용이 처음이라면, 얼마 걸리지 않으니 이들을 시험해 본다. 인스턴스 그룹은
 쿠버네티스 노드로 등록된 인스턴스의 집합을 말한다. AWS상에서는 auto-scaling-groups를
-통해 만들어진다. 사용자는 여러개의 인스턴스 그룹을 관리할 수 있는데,
+통해 만들어진다. 사용자는 여러 개의 인스턴스 그룹을 관리할 수 있는데,
 예를 들어, spot과 on-demand 인스턴스 조합 또는 GPU 와 non-GPU 인스턴스의 조합으로 구성할 수 있다.
 
 

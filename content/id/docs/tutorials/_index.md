@@ -18,7 +18,7 @@ Sebelum melangkah lebih lanjut ke tutorial, sebaiknya tandai dulu halaman [Kamus
 
 ## Prinsip Dasar
 
-* [Prinsip Dasar Kubernetes](/docs/tutorials/kubernetes-basics/) merupakan tutorial yang sangat interaktif, membantu kamu mengerti apa itu sistem Kubernetes dan beberapa fitur Kubernetes yang umum digunakan.
+* [Prinsip Dasar Kubernetes](/id/docs/tutorials/kubernetes-basics/) merupakan tutorial yang sangat interaktif, membantu kamu mengerti apa itu sistem Kubernetes dan beberapa fitur Kubernetes yang umum digunakan.
 
 * [Mikroservis yang Scalable dengan Kubernetes (Udacity)](https://www.udacity.com/course/scalable-microservices-with-kubernetes--ud615)
 
@@ -45,16 +45,6 @@ Sebelum melangkah lebih lanjut ke tutorial, sebaiknya tandai dulu halaman [Kamus
 * [Contoh: Deploy Cassandra dengan Stateful Sets](/docs/tutorials/stateful-application/cassandra/)
 
 * [Menjalankan ZooKeeper, sebuah sistem terdistribusi yang berbasis CP](/docs/tutorials/stateful-application/zookeeper/)
-
-## Pipeline CI/CD
-
-* [Menyiapkan Pipeline CI/CD dengan Kubernetes Bagian 1: Ringkasan](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/5/set-cicd-pipeline-kubernetes-part-1-overview)
-
-* [Menyiapkan Pipeline CI/CD dengan Jenkins Pod di Kubernetes (Part 2)](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/6/set-cicd-pipeline-jenkins-pod-kubernetes-part-2)
-
-* [Menjalankan dan Mereplikasi Aplikasi Teka-Teki Terdistribusi dengan CI/CD pada Kubernetes (Bagian 3)](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/run-and-scale-distributed-crossword-puzzle-app-cicd-kubernetes-part-3)
-
-* [Menyiapkan CI/CD  untuk Aplikasi Teka-Teki Terdistribusi pada Kubernetes (Bagian 4)](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/set-cicd-distributed-crossword-puzzle-app-kubernetes-part-4)
 
 ## Klaster
 

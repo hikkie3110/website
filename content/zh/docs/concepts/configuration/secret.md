@@ -166,7 +166,7 @@ kubectl create secret generic dev-db-secret \
 You do not need to escape special characters in passwords from files (`--from-file`).
  -->
 {{< note >}}
-特殊字符（例如 `$`、`*`、`*`、`=` 和 `!`）可能会被你的
+特殊字符（例如 `$`、`\`、`*`、`=` 和 `!`）可能会被你的
 [Shell](https://en.wikipedia.org/wiki/Shell_(computing)) 解析，因此需要转义。
 在大多数 Shell 中，对密码进行转义的最简单方式是使用单引号（`'`）将其扩起来。
 例如，如果您的实际密码是 `S!B\*d$zDsb=` ，则应通过以下方式执行命令：
@@ -473,7 +473,7 @@ you can create the Secret on the API server with `kubectl apply`.
 -->
 #### 从生成器创建 Secret
 
-Kubectl 从 1.14 版本开始支持[使用 Kustomize 管理对象](/zh/docs/tasks/manage-kubernetes-objects/kustomization/)。
+Kubectl 从 1.14 版本开始支持[使用 Kustomize 管理对象](/docs/tasks/manage-kubernetes-objects/kustomization/)。
 Kustomize 提供资源生成器创建 Secret 和 ConfigMaps。
 Kustomize 生成器要在当前目录内的 `kustomization.yaml` 中指定。
 生成 Secret 之后，使用 `kubectl apply` 在 API 服务器上创建对象。

@@ -71,7 +71,7 @@ DNS 서버는 새로운 `서비스`를 위한 쿠버네티스 API를 Watch하며
 
 ## 컨테이너 이미지
 
-[imagePullPolicy](/ko/docs/concepts/containers/images/#이미지-업데이트)와 이미지의 태그는 [kubelet](/docs/admin/kubelet/)이 명시된 이미지를 풀(pull) 하려고 시도할 때 영향을 미친다.
+[imagePullPolicy](/ko/docs/concepts/containers/images/#이미지-업데이트)와 이미지의 태그는 [kubelet](/docs/reference/command-line-tools-reference/kubelet/)이 명시된 이미지를 풀(pull) 하려고 시도할 때 영향을 미친다.
 
 - `imagePullPolicy: IfNotPresent`: 이미지가 로컬에 이미 존재하지 않으면 이미지가 풀(Pull) 된다.
 
@@ -101,4 +101,4 @@ DNS 서버는 새로운 `서비스`를 위한 쿠버네티스 API를 Watch하며
 
 - `get`과 `delete` 동작을 위해 특정 오브젝트의 이름 대신 레이블 셀렉터를 사용한다. [레이블 셀렉터](/ko/docs/concepts/overview/working-with-objects/labels/#레이블-셀렉터)와 [효율적으로 레이블 사용하기](/ko/docs/concepts/cluster-administration/manage-deployment/#효과적인-레이블-사용)를 참고할 수 있다.
 
-- 단일 컨테이너로 구성된 디플로이먼트와 서비스를 빠르게 생성하기 위해 `kubectl create deployment` 와 `kubectl expose` 를 사용한다. [클러스터 내부의 애플리케이션에 접근하기 위한 서비스 사용](/docs/tasks/access-application-cluster/service-access-application-cluster/)에서 예시를 확인할 수 있다.
+- 단일 컨테이너로 구성된 디플로이먼트와 서비스를 빠르게 생성하기 위해 `kubectl create deployment` 와 `kubectl expose` 를 사용한다. [클러스터 내부의 애플리케이션에 접근하기 위한 서비스 사용](/ko/docs/tasks/access-application-cluster/service-access-application-cluster/)에서 예시를 확인할 수 있다.

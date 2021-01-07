@@ -47,6 +47,13 @@ Limits can be implemented either reactively (the system intervenes once it sees 
 or by enforcement (the system prevents the container from ever exceeding the limit). Different
 runtimes can have different ways to implement the same restrictions.
 
+{{< note >}}
+If a Container specifies its own memory limit, but does not specify a memory request, Kubernetes
+automatically assigns a memory request that matches the limit. Similarly, if a Container specifies its own
+CPU limit, but does not specify a CPU request, Kubernetes automatically assigns a CPU request that matches
+the limit.
+{{< /note >}}
+
 ## Resource types
 
 *CPU* and *memory* are each a *resource type*. A resource type has a base unit.
@@ -111,7 +118,7 @@ CPU is always requested as an absolute quantity, never as a relative quantity;
 ### Meaning of memory
 
 Limits and requests for `memory` are measured in bytes. You can express memory as
-a plain integer or as a fixed-point integer using one of these suffixes:
+a plain integer or as a fixed-point number using one of these suffixes:
 E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi,
 Mi, Ki. For example, the following represent roughly the same value:
 
@@ -134,7 +141,6 @@ spec:
   containers:
   - name: app
     image: images.my-company.example/app:v4
-    env:
     resources:
       requests:
         memory: "64Mi"
@@ -311,7 +317,7 @@ You can use _ephemeral-storage_ for managing local ephemeral storage. Each Conta
 * `spec.containers[].resources.requests.ephemeral-storage`
 
 Limits and requests for `ephemeral-storage` are measured in bytes. You can express storage as
-a plain integer or as a fixed-point integer using one of these suffixes:
+a plain integer or as a fixed-point number using one of these suffixes:
 E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi,
 Mi, Ki. For example, the following represent roughly the same value:
 
@@ -439,7 +445,7 @@ If you want to use project quotas, you should:
   [feature gate](/docs/reference/command-line-tools-reference/feature-gates/)
   in the kubelet configuration.
 
-* Ensure that the the root filesystem (or optional runtime filesystem)
+* Ensure that the root filesystem (or optional runtime filesystem)
   has project quotas enabled. All XFS filesystems support project quotas.
   For ext4 filesystems, you need to enable the project quota tracking feature
   while the filesystem is not mounted.

@@ -13,6 +13,13 @@ card:
 
 <!-- overview -->
 
+*쿠버네티스는 신규 및 숙련된 모든 기여자의 개선을 환영합니다!*
+
+{{< note >}}
+일반적인 쿠버네티스에 기여하는 방법에 대한 자세한 내용은
+[기여자 문서](https://www.kubernetes.dev/docs/)를 참고한다.
+{{< /note >}}
+
 이 웹사이트는 [쿠버네티스 SIG Docs](/ko/docs/contribute/#sig-docs에-참여)에 의해서 관리됩니다.
 
 쿠버네티스 문서 기여자들은
@@ -21,8 +28,6 @@ card:
 - 새 콘텐츠를 만듭니다.
 - 문서를 번역합니다.
 - 쿠버네티스 릴리스 주기에 맞추어 문서 부분을 관리하고 발행합니다.
-
-쿠버네티스 문서는 새롭고 경험이 풍부한 모든 기여자의 개선을 환영합니다!
 
 <!-- body -->
 
@@ -53,8 +58,8 @@ card:
 
 - [기여 개요](/ko/docs/contribute/new-content/overview/)를 읽고
   기여할 수 있는 다양한 방법에 대해 알아봅니다.
-- [kubernetes/website에 기여하기](https://github.com/kubernetes/website/contribute)를
-  참조하여 좋은 진입점이 되는 이슈를 찾을 수 있습니다.
+- [`kubernetes/website` 이슈 목록](https://github.com/kubernetes/website/issues/)을
+  확인하여 좋은 진입점이 되는 이슈를 찾을 수 있습니다.
 - 기존 문서에 대해 [GitHub을 사용해서 풀 리퀘스트 열거나](/ko/docs/contribute/new-content/new-content/#github을-사용하여-변경하기)
   GitHub에서의 이슈 제기에 대해 자세히 알아봅니다.
 - 정확성과 언어에 대해 다른 쿠버네티스 커뮤니티 맴버의

@@ -75,7 +75,11 @@ Kubernetes1.8のように、ユーザーは`.spec.template`のラベルにマッ
 ### 選択したNode上でPodを稼働させる
 
 もしユーザーが`.spec.template.spec.nodeSelector`を指定したとき、DaemonSetコントローラーは、その[node
+<<<<<<< HEAD
 selector](/docs/concepts/scheduling-eviction/assign-pod-node/)にマッチするPodをNode上に作成します。同様に、もし`.spec.template.spec.affinity`を指定したとき、DaemonSetコントローラーは[node affinity](/docs/concepts/scheduling-eviction/assign-pod-node/)マッチするPodをNode上に作成します。
+=======
+selector](/ja/docs/concepts/scheduling-eviction/assign-pod-node/)にマッチするPodをNode上に作成します。同様に、もし`.spec.template.spec.affinity`を指定したとき、DaemonSetコントローラーは[node affinity](/ja/docs/concepts/scheduling-eviction/assign-pod-node/)マッチするPodをNode上に作成します。
+>>>>>>> 9e62add444ddf2348b5f3d02c71766929b2f628d
 もしユーザーがどちらも指定しないとき、DaemonSetコントローラーは全てのNode上にPodを作成します。
 
 ## Daemon Podがどのようにスケジューリングされるか

@@ -55,7 +55,7 @@ a Pod scheduled to a Node with 8GiB of memory and no other Pods, then the contai
 more RAM.
 -->
 
-## 请求和约束
+## 请求和约束  {#requests-and-limits}
 
 如果 Pod 运行所在的节点具有足够的可用资源，容器可能（且可以）使用超出对应资源
 `request` 属性所设置的资源量。不过，容器不可以使用超出其资源 `limit`
@@ -90,6 +90,7 @@ runtimes can have different ways to implement the same restrictions.
 
 <!--
 ## Resource types
+
 *CPU* and *memory* are each a *resource type*. A resource type has a base unit.
 CPU represents compute processing and is specified in units of [Kubernetes CPUs](#meaning-of-cpu).
 Memory is specified in units of bytes.
@@ -101,8 +102,7 @@ For example, on a system where the default page size is 4KiB, you could specify 
 `hugepages-2Mi: 80Mi`. If the container tries allocating over 40 2MiB huge pages (a
 total of 80 MiB), that allocation fails.
 -->
-
-## 资源类型
+## 资源类型  {#resource-types}
 
 *CPU* 和*内存*都是*资源类型*。每种资源类型具有其基本单位。
 CPU 表达的是计算处理能力，其单位是 [Kubernetes CPUs](#meaning-of-cpu)。
@@ -210,15 +210,15 @@ CPU 总是按绝对数量来请求的，不可以使用相对数量；
 
 <!--
 ## Meaning of memory
+
 Limits and requests for `memory` are measured in bytes. You can express memory as
-a plain integer or as a fixed-point integer using one of these suffixes:
+a plain integer or as a fixed-point number using one of these suffixes:
 E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi,
 Mi, Ki. For example, the following represent roughly the same value:
 -->
+## 内存的含义  {#meaning-of-memory}
 
-## 内存的含义
-
-内存的约束和请求以字节为单位。你可以使用以下后缀之一以一般整数或定点整数形式来表示内存：
+内存的约束和请求以字节为单位。你可以使用以下后缀之一以一般整数或定点数字形式来表示内存：
 E、P、T、G、M、K。你也可以使用对应的 2 的幂数：Ei、Pi、Ti、Gi、Mi、Ki。
 例如，以下表达式所代表的是大致相同的值：
 
@@ -403,8 +403,7 @@ The kubelet can provide scratch space to Pods using local ephemeral storage to
 mount [`emptyDir`](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)
  {{< glossary_tooltip term_id="volume" text="volumes" >}} into containers.
 -->
-
-## 本地临时存储
+## 本地临时存储   {#local-ephemeral-storage}
 
 <!-- feature gate LocalStorageCapacityIsolation -->
 {{< feature-state for_k8s_version="v1.10" state="beta" >}}
@@ -574,7 +573,7 @@ You can use _ephemeral-storage_ for managing local ephemeral storage. Each Conta
 * `spec.containers[].resources.requests.ephemeral-storage`
 
 Limits and requests for `ephemeral-storage` are measured in bytes. You can express storage as
-a plain integer or as a fixed-point integer using one of these suffixes:
+a plain integer or as a fixed-point number using one of these suffixes:
 E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi,
 Mi, Ki. For example, the following represent roughly the same value:
 
@@ -591,7 +590,7 @@ Pod 中的每个 Container 可以设置以下属性：
 * `spec.containers[].resources.limits.ephemeral-storage`
 * `spec.containers[].resources.requests.ephemeral-storage`
 
-`ephemeral-storage` 的请求和约束值是按字节计量的。你可以使用一般整数或者定点整数
+`ephemeral-storage` 的请求和约束值是按字节计量的。你可以使用一般整数或者定点数字
 加上下面的后缀来表达存储量：E、P、T、G、M、K。
 你也可以使用对应的 2 的幂级数来表达：Ei、Pi、Ti、Gi、Mi、Ki。
 例如，下面的表达式所表达的大致是同一个值：
@@ -816,7 +815,7 @@ If you want to use project quotas, you should:
   [feature gate](/docs/reference/command-line-tools-reference/feature-gates/)
   in the kubelet configuration.
 
-* Ensure that the the root filesystem (or optional runtime filesystem)
+* Ensure that the root filesystem (or optional runtime filesystem)
   has project quotas enabled. All XFS filesystems support project quotas.
   For ext4 filesystems, you need to enable the project quota tracking feature
   while the filesystem is not mounted.
@@ -862,7 +861,7 @@ operator must advertise an Extended Resource. Second, users must request the
 Extended Resource in Pods.
 -->
 
-## 扩展资源（Extended Resources）
+## 扩展资源（Extended Resources）   {#extended-resources}
 
 扩展资源是 `kubernetes.io` 域名之外的标准资源名称。
 它们使得集群管理员能够颁布非 Kubernetes 内置资源，而用户可以使用他们。

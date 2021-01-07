@@ -26,7 +26,7 @@ kube-controller-manager 바이너리의 일부로 실행되는 컨트롤러의 �
 * [Ambassador](https://www.getambassador.io/) API 게이트웨이는 [Datawire](https://www.datawire.io/)의
   [커뮤니티](https://www.getambassador.io/docs) 혹은 [상업적](https://www.getambassador.io/pro/) 지원을 제공하는
   [Envoy](https://www.envoyproxy.io) 기반 인그레스 컨트롤러다.
-* [AppsCode Inc.](https://appscode.com) 는 가장 널리 사용되는 [HAProxy](http://www.haproxy.org/) 기반 인그레스 컨트롤러인 [Voyager](https://appscode.com/products/voyager)에 대한 지원 및 유지 보수를 제공한다.
+* [AppsCode Inc.](https://appscode.com) 는 가장 널리 사용되는 [HAProxy](https://www.haproxy.org/) 기반 인그레스 컨트롤러인 [Voyager](https://appscode.com/products/voyager)에 대한 지원 및 유지 보수를 제공한다.
 * [AWS ALB 인그레스 컨트롤러](https://github.com/kubernetes-sigs/aws-alb-ingress-controller)는 [AWS Application Load Balancer](https://aws.amazon.com/elasticloadbalancing/)를 사용하여 인그레스를 활성화한다.
 * [Contour](https://projectcontour.io/)는 [Envoy](https://www.envoyproxy.io/) 기반 인그레스 컨트롤러로
   VMware에서 제공하고 지원한다.
@@ -44,9 +44,9 @@ kube-controller-manager 바이너리의 일부로 실행되는 컨트롤러의 �
 * [NGINX, Inc.](https://www.nginx.com/)는
   [쿠버네티스를 위한 NGINX 인그레스 컨트롤러](https://www.nginx.com/products/nginx/kubernetes-ingress-controller)에 대한 지원과 유지 보수를 제공한다.
 * [Skipper](https://opensource.zalando.com/skipper/kubernetes/ingress-controller/)는 쿠버네티스 인그레스와 같은 유스케이스를 포함하는 서비스 구성을 위한 HTTP 라우터와 리버스 프록시는 사용자 정의 프록시를 빌드하기 위한 라이브러리로 설계되었다.
-* [Traefik](https://github.com/containous/traefik)은
+* [Traefik](https://github.com/traefik/traefik)은
   모든 기능([Let's Encrypt](https://letsencrypt.org), secrets, http2, 웹 소켓)을 갖춘 인그레스 컨트롤러로,
-  [Containous](https://containo.us/services)에서 상업적인 지원을 제공한다.
+  [Traefik Labs](https://traefik.io)에서 상업적인 지원을 제공한다.
 
 ## 여러 인그레스 컨트롤러 사용
 

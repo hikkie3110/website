@@ -54,8 +54,8 @@ card:
 #### 既存のページの誤字脱字や古い記述を修正する場合の手順
 
 1. `kubernetes/website`リポジトリをフォークする
-2. `dev-1.18-ja.1`(最新のマイルストーンブランチに適宜読み替えること)から任意の名前でブランチを作成し、該当箇所を編集する
-3. `dev-1.18-ja.1`(最新のマイルストーンブランチに適宜読み替えること)ブランチに向けてPull Requestを作成する
+2. `dev-1.18-ja.2`(最新のマイルストーンブランチに適宜読み替えること)から任意の名前でブランチを作成し、該当箇所を編集する
+3. `dev-1.18-ja.2`(最新のマイルストーンブランチに適宜読み替えること)ブランチに向けてPull Requestを作成する
 
 ### マイルストーンについて {#milestones}
 
@@ -86,28 +86,29 @@ card:
 
 英語 | 日本語
 --------- | ---------
+Addon/Add-on|アドオン
+Aggregation Layer | アグリゲーションレイヤー
+architecture | アーキテクチャ
+binary | バイナリ
 cluster|クラスター
+community | コミュニティ
+container | コンテナ
+controller | コントローラー
+Deployment/Deploy|KubernetesリソースとしてのDeploymentはママ表記、一般的な用語としてのdeployの場合は、デプロイ
+directory | ディレクトリ
+For more information|さらなる情報(一時的)
+GitHub | GitHub (ママ表記)
+Issue | Issue (ママ表記)
+operator | オペレーター
 orchestrate(動詞)|オーケストレーションする
 Persistent Volume|KubernetesリソースとしてのPersistentVolumeはママ表記、一般的な用語としての場合は、永続ボリューム
-Deployment/Deploy|KubernetesリソースとしてのDeploymentはママ表記、一般的な用語としてのdeployの場合は、デプロイ
-Addon/Add-on|アドオン
-Quota|クォータ
-For more information|さらなる情報(一時的)
 prefix | プレフィックス
-container | コンテナ
-directory | ディレクトリ
-binary | バイナリ
-controller | コントローラー
-opeartor | オペレーター
-Aggregation Layer | アグリゲーションレイヤー
-Issue | Issue (ママ表記)
 Pull Request | Pull Request (ママ表記)
-GitHub | GitHub (ママ表記)
+Quota|クォータ
 registry | レジストリ
-architecture | アーキテクチャ
 secure | セキュア
-stacked | 積層(例: stacked etcd clusterは積層etcdクラスター)
 a set of ~ | ～の集合
+stacked | 積層(例: stacked etcd clusterは積層etcdクラスター)
 
 ### 備考
 

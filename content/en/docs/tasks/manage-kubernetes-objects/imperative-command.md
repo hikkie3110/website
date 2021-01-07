@@ -37,7 +37,7 @@ The `kubectl` tool supports verb-driven commands for creating some of the most c
 object types. The commands are named to be recognizable to users unfamiliar with
 the Kubernetes object types.
 
-- `run`: Create a new Deployment object to run Containers in one or more Pods.
+- `run`: Create a new Pod to run a Container.
 - `expose`: Create a new Service object to load balance traffic across Pods.
 - `autoscale`: Create a new Autoscaler object to automatically horizontally scale a controller, such as a Deployment.
 
@@ -167,7 +167,7 @@ kubectl create --edit -f /tmp/srv.yaml
 
 * [Managing Kubernetes Objects Using Object Configuration (Imperative)](/docs/tasks/manage-kubernetes-objects/imperative-config/)
 * [Managing Kubernetes Objects Using Object Configuration (Declarative)](/docs/tasks/manage-kubernetes-objects/declarative-config/)
-* [Kubectl Command Reference](/docs/reference/generated/kubectl/kubectl/)
+* [Kubectl Command Reference](/docs/reference/generated/kubectl/kubectl-commands/)
 * [Kubernetes API Reference](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/)
 
 

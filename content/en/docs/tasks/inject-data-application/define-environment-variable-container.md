@@ -9,16 +9,9 @@ weight: 20
 This page shows how to define environment variables for a container
 in a Kubernetes Pod.
 
-
-
-
 ## {{% heading "prerequisites" %}}
 
-
 {{< include "task-tutorial-prereqs.md" >}}
-
-
-
 
 <!-- steps -->
 
@@ -54,17 +47,10 @@ Pod:
     envar-demo      1/1       Running   0          9s
     ```
 
-1. Get a shell to the container running in your Pod:
+1. List the Pod's container environment variables:
 
     ```shell
-    kubectl exec -it envar-demo -- /bin/bash
-    ```
-
-1. In your shell, run the `printenv` command to list the environment variables.
-
-    ```shell
-    # Run this in the shell inside the container
-    printenv
+    kubectl exec envar-demo -- printenv
     ```
 
     The output is similar to this:
@@ -77,8 +63,6 @@ Pod:
     DEMO_GREETING=Hello from the environment
     DEMO_FAREWELL=Such a sweet sorrow
     ```
-
-1. To exit the shell, enter `exit`.
 
 {{< note >}}
 The environment variables set using the `env` or `envFrom` field
@@ -123,13 +107,9 @@ spec:
 
 Upon creation, the command `echo Warm greetings to The Most Honorable Kubernetes` is run on the container.
 
-
-
 ## {{% heading "whatsnext" %}}
 
-
 * Learn more about [environment variables](/docs/tasks/inject-data-application/environment-variable-expose-pod-information/).
-* Learn about [using secrets as environment variables](/docs/user-guide/secrets/#using-secrets-as-environment-variables).
+* Learn about [using secrets as environment variables](/docs/concepts/configuration/secret/#using-secrets-as-environment-variables).
 * See [EnvVarSource](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#envvarsource-v1-core).
-
 

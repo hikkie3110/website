@@ -1,7 +1,7 @@
 ---
 title: 가비지(Garbage) 수집
 content_type: concept
-weight: 70
+weight: 60
 ---
 
 <!-- overview -->
@@ -111,12 +111,6 @@ metadata:
 인수를 `propagationPolicy` 필드에 설정한다. 여기에 가능한 값으로는 "Orphan",
 "Foreground" 또는 "Background" 이다.
 
-쿠버네티스 1.9 이전에는 많은 컨트롤러의 리소스에 대한 기본 가비지 수집 정책이 `orphan` 이었다.
-여기에는 레플리케이션컨트롤러, 레플리카셋, 스테이트풀셋, 데몬셋 그리고
-디플로이먼트가 포함된다. 그룹 버전 `extensions/v1beta1`, `apps/v1beta1` 그리고 `apps/v1beta2` 의 kinds에서는
-달리 지정하지 않는 한 오브젝트가 분리되는 것이 기본이다. 쿠버네티스 1.9에서는 그룹 버전 `apps/v1` 의 모든 kinds에 해당하는
-종속 오브젝트들이 기본적으로 삭제된다.
-
 여기에 백그라운드에서 종속 항목을 삭제하는 예시가 있다.
 
 ```shell
@@ -158,7 +152,7 @@ kubectl delete replicaset my-repset --cascade=false
 ### 디플로이먼트에 대한 추가 참고
 
 1.7 이전에서는 디플로이먼트와 캐스케이딩 삭제를 사용하면 반드시 `propagationPolicy: Foreground`
-를 사용해서 생성된 레플리카셋 뿐만 아니라 해당 파드도 삭제해야 한다. 만약 이 _propagationPolicy_
+를 사용해서 생성된 레플리카셋뿐만 아니라 해당 파드도 삭제해야 한다. 만약 이 _propagationPolicy_
 유형을 사용하지 않는다면, 레플리카셋만 삭제되고 파드는 분리된 상태로 남을 것이다.
 더 많은 정보는 [kubeadm/#149](https://github.com/kubernetes/kubeadm/issues/149#issuecomment-284766613)를 본다.
 

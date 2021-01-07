@@ -145,7 +145,7 @@ from a _pod template_ and manage those Pods on your behalf.
 
 PodTemplates are specifications for creating Pods, and are included in workload resources such as
 [Deployments](/docs/concepts/workloads/controllers/deployment/),
-[Jobs](/docs/concepts/jobs/run-to-completion-finite-workloads/), and
+[Jobs](/docs/concepts/workloads/controllers/job/), and
 [DaemonSets](/docs/concepts/workloads/controllers/daemonset/).
 
 Each controller for a workload resource uses the `PodTemplate` inside the workload
@@ -217,7 +217,7 @@ or POSIX shared memory.  Containers in different Pods have distinct IP addresses
 and can not communicate by IPC without
 [special configuration](/docs/concepts/policy/pod-security-policy/).
 Containers that want to interact with a container running in a different Pod can
-use IP networking to comunicate.
+use IP networking to communicate.
 
 Containers within the Pod see the system hostname as being the same as the configured
 `name` for the Pod. There's more about this in the [networking](/docs/concepts/cluster-administration/networking/)
@@ -254,17 +254,17 @@ but cannot be controlled from there.
 
 * Learn about the [lifecycle of a Pod](/docs/concepts/workloads/pods/pod-lifecycle/).
 * Learn about [PodPresets](/docs/concepts/workloads/pods/podpreset/).
-* Lean about [RuntimeClass](/docs/concepts/containers/runtime-class/) and how you can use it to
+* Learn about [RuntimeClass](/docs/concepts/containers/runtime-class/) and how you can use it to
   configure different Pods with different container runtime configurations.
 * Read about [Pod topology spread constraints](/docs/concepts/workloads/pods/pod-topology-spread-constraints/).
-* Read about [PodDisruptionBudget](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/) and how you can use it to manage application availability during disruptions.
+* Read about [PodDisruptionBudget](/docs/concepts/workloads/pods/disruptions/) and how you can use it to manage application availability during disruptions.
 * Pod is a top-level resource in the Kubernetes REST API.
   The [Pod](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#pod-v1-core)
   object definition describes the object in detail.
 * [The Distributed System Toolkit: Patterns for Composite Containers](https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns) explains common layouts for Pods with more than one container.
 
 To understand the context for why Kubernetes wraps a common Pod API in other resources (such as {{< glossary_tooltip text="StatefulSets" term_id="statefulset" >}} or {{< glossary_tooltip text="Deployments" term_id="deployment" >}}, you can read about the prior art, including:
-  * [Aurora](http://aurora.apache.org/documentation/latest/reference/configuration/#job-schema)
+  * [Aurora](https://aurora.apache.org/documentation/latest/reference/configuration/#job-schema)
   * [Borg](https://research.google.com/pubs/pub43438.html)
   * [Marathon](https://mesosphere.github.io/marathon/docs/rest-api.html)
   * [Omega](https://research.google/pubs/pub41684/)

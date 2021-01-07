@@ -129,7 +129,7 @@ curl을 할 수 있을 것이다. 서비스 IP는 완전히 가상이므로 외�
 
 쿠버네티스는 서비스를 찾는 두 가지 기본 모드인 환경 변수와 DNS를
 지원한다. 전자는 기본적으로 작동하지만 후자는
-[CoreDNS 클러스터 애드온](http://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/coredns)이 필요하다.
+[CoreDNS 클러스터 애드온](https://releases.k8s.io/{{< param "githubbranch" >}}/cluster/addons/dns/coredns)이 필요하다.
 {{< note >}}
 만약 서비스 환경 변수가 필요하지 않은 경우(소유한 프로그램과의 예상되는 충돌 가능성,
 처리할 변수가 너무 많은 경우, DNS만 사용하는 경우 등) [파드 사양](/docs/reference/generated/kubernetes-api/{{< param "version" >}}/#pod-v1-core)에서
@@ -225,7 +225,7 @@ Address 1: 10.0.162.149
 
 * https에 대한 자체 서명한 인증서 (신원 인증서를 가지고 있지 않은 경우)
 * 인증서를 사용하도록 구성된 nginx 서버
-* 파드에 접근할 수 있는 인증서를 만드는 [시크릿](/docs/concepts/configuration/secret/)
+* 파드에 접근할 수 있는 인증서를 만드는 [시크릿](/ko/docs/concepts/configuration/secret/)
 
 [nginx https 예제](https://github.com/kubernetes/examples/tree/{{< param "githubbranch" >}}/staging/https-nginx/)에서 이 모든 것을 얻을 수 있다. 이를 위해서는 도구를 설치해야 한다. 만약 설치하지 않으려면 나중에 수동으로 단계를 수행한다. 한마디로:
 
@@ -419,6 +419,6 @@ LoadBalancer Ingress:   a320587ffd19711e5a37606cf4a74574-1142138393.us-east-1.el
 ## {{% heading "whatsnext" %}}
 
 
-* [서비스를 사용해서 클러스터 내 애플리케이션에 접근하기](/docs/tasks/access-application-cluster/service-access-application-cluster/)를 더 자세히 알아본다.
+* [서비스를 사용해서 클러스터 내 애플리케이션에 접근하기](/ko/docs/tasks/access-application-cluster/service-access-application-cluster/)를 더 자세히 알아본다.
 * [서비스를 사용해서 프론트 엔드부터 백 엔드까지 연결하기](/docs/tasks/access-application-cluster/connecting-frontend-backend/)를 더 자세히 알아본다.
 * [외부 로드 밸런서를 생성하기](/docs/tasks/access-application-cluster/create-external-load-balancer/)를 더 자세히 알아본다.

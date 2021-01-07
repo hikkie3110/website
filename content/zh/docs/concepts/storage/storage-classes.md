@@ -18,7 +18,7 @@ with [volumes](/docs/concepts/storage/volumes/) and
 [persistent volumes](/docs/concepts/storage/persistent-volumes) is suggested.
 -->
 本文描述了 Kubernetes 中 StorageClass 的概念。建议先熟悉 [卷](/zh/docs/concepts/storage/volumes/) 和
-[持久卷](/zh/docs/concepts/storage/persistent-volumes) 的概念。
+[持久卷](/docs/concepts/storage/persistent-volumes) 的概念。
 
 <!-- body -->
 
@@ -67,7 +67,7 @@ for details.
  -->
 管理员可以为没有申请绑定到特定 StorageClass 的 PVC 指定一个默认的存储类 ：
 更多详情请参阅
-[PersistentVolumeClaim 章节](/zh/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)。
+[PersistentVolumeClaim 章节](/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)。
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -240,7 +240,7 @@ the class or PV, so mount of the PV will simply fail if one is invalid.
 The `volumeBindingMode` field controls when [volume binding and dynamic
 provisioning](/docs/concepts/storage/persistent-volumes/#provisioning) should occur.
  -->
-`volumeBindingMode` 字段控制了[卷绑定和动态分配](/zh/docs/concepts/storage/persistent-volumes/#provisioning)
+`volumeBindingMode` 字段控制了[卷绑定和动态分配](/docs/concepts/storage/persistent-volumes/#provisioning)
 应该发生在什么时候。
 
 <!--
@@ -668,9 +668,10 @@ OpenStack 的内部驱动程序已经被弃用。请使用 [OpenStack 的外部�
       diskformat: zeroedthick
     ```
 
-<!--
+    <!--
     `diskformat`: `thin`, `zeroedthick` and `eagerzeroedthick`. Default: `"thin"`.
- -->
+    -->
+
     `diskformat`: `thin`, `zeroedthick` 和 `eagerzeroedthick`。默认值: `"thin"`。
 
 <!--
@@ -689,14 +690,15 @@ OpenStack 的内部驱动程序已经被弃用。请使用 [OpenStack 的外部�
         datastore: VSANDatastore
     ```
 
-<!--
+    <!--
     `datastore`: The user can also specify the datastore in the StorageClass.
     The volume will be created on the datastore specified in the storage class,
     which in this case is `VSANDatastore`. This field is optional. If the
     datastore is not specified, then the volume will be created on the datastore
     specified in the vSphere config file used to initialize the vSphere Cloud
     Provider.
--->
+    -->
+
     `datastore`：用户也可以在 StorageClass 中指定数据存储。
     卷将在 storage class 中指定的数据存储上创建，在这种情况下是 `VSANDatastore`。
     该字段是可选的。
@@ -708,7 +710,7 @@ OpenStack 的内部驱动程序已经被弃用。请使用 [OpenStack 的外部�
 -->
 3. Kubernetes 中的存储策略管理
 
-<!--
+    <!--
     * Using existing vCenter SPBM policy
 
         One of the most important features of vSphere for Storage Management is
@@ -721,7 +723,8 @@ OpenStack 的内部驱动程序已经被弃用。请使用 [OpenStack 的外部�
 
         The SPBM policies can be specified in the StorageClass using the
         `storagePolicyName` parameter.
--->
+    -->
+
     * 使用现有的 vCenter SPBM 策略
 
         vSphere 用于存储管理的最重要特性之一是基于策略的管理。
@@ -731,7 +734,7 @@ OpenStack 的内部驱动程序已经被弃用。请使用 [OpenStack 的外部�
 
         SPBM 策略可以在 StorageClass 中使用 `storagePolicyName` 参数声明。
 
-<!--
+    <!--
     * Virtual SAN policy support inside Kubernetes
 
         Vsphere Infrastructure (VI) Admins will have the ability to specify custom
@@ -746,7 +749,8 @@ OpenStack 的内部驱动程序已经被弃用。请使用 [OpenStack 的外部�
         You can see [Storage Policy Based Management for dynamic provisioning of volumes](https://vmware.github.io/vsphere-storage-for-kubernetes/documentation/policy-based-mgmt.html)
         for more details on how to use storage policies for persistent volumes
         management.
--->
+    -->
+
     * Kubernetes 内的 Virtual SAN 策略支持
 
         Vsphere Infrastructure（VI）管理员将能够在动态卷配置期间指定自定义 Virtual SAN

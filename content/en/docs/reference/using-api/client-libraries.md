@@ -12,20 +12,20 @@ API from various programming languages.
 
 
 <!-- body -->
-To write applications using the [Kubernetes REST API](/docs/reference/using-api/api-overview/),
+To write applications using the [Kubernetes REST API](/docs/reference/using-api/),
 you do not need to implement the API calls and request/response types yourself.
 You can use a client library for the programming language you are using.
 
 Client libraries often handle common tasks such as authentication for you.
 Most client libraries can discover and use the Kubernetes Service Account to
 authenticate if the API client is running inside the Kubernetes cluster, or can
-understand the [kubeconfig file](/docs/tasks/access-application-cluster/authenticate-across-clusters-kubeconfig/)
+understand the [kubeconfig file](/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)
 format to read the credentials and the API Server address.
 
 ## Officially-supported Kubernetes client libraries
 
-The following client libraries are officially maintained by [Kubernetes SIG API
-Machinery](https://github.com/kubernetes/community/tree/master/sig-api-machinery).
+The following client libraries are officially maintained by
+[Kubernetes SIG API Machinery](https://github.com/kubernetes/community/tree/master/sig-api-machinery).
 
 
 | Language | Client Library | Sample Programs |
@@ -39,6 +39,8 @@ Machinery](https://github.com/kubernetes/community/tree/master/sig-api-machinery
 
 
 ## Community-maintained client libraries
+
+{{% thirdparty-content %}}
 
 The following Kubernetes API client libraries are provided and maintained by
 their authors, not the Kubernetes team.
@@ -60,6 +62,7 @@ their authors, not the Kubernetes team.
 | PHP                  | [github.com/allansun/kubernetes-php-client](https://github.com/allansun/kubernetes-php-client) |
 | PHP                  | [github.com/maclof/kubernetes-client](https://github.com/maclof/kubernetes-client) |
 | PHP                  | [github.com/travisghansen/kubernetes-client-php](https://github.com/travisghansen/kubernetes-client-php) |
+| PHP                  | [github.com/renoki-co/php-k8s](https://github.com/renoki-co/php-k8s) |
 | Python               | [github.com/eldarion-gondor/pykube](https://github.com/eldarion-gondor/pykube) |
 | Python               | [github.com/fiaas/k8s](https://github.com/fiaas/k8s) |
 | Python               | [github.com/mnubo/kubernetes-py](https://github.com/mnubo/kubernetes-py) |
